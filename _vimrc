@@ -228,6 +228,4 @@ map <leader>b :Buffers<CR>
 map <leader>f :Files<CR>
 map <leader>l :Lines<CR>
 map <leader>win :Windows<CR>
-
 " }}}
-" hello world
