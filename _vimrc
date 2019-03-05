@@ -166,7 +166,7 @@ nmap ,fp :let @*=substitute(expand("%:p"), "/", "\\", "g")<CR>
 
 " 根据文件类型来运行
 autocmd FileType python nnoremap <buffer> <F12> :!python % <CR>
-autocmd FileType ps1 nnoremap <buffer> <F12> :!cmd /k powershell -file % <CR>
+autocmd FileType ps1 nnoremap <buffer> <F12> :!powershell -file % <CR>
 
 ""设置运行python代码的快捷键，绑定到F12按键上
 "map <F12> :!c:\Python27\python.exe %<CR>
@@ -227,5 +227,6 @@ map <leader>hm :Hexmode<CR>
 map <leader>b :Buffers<CR>
 map <leader>f :Files<CR>
 map <leader>l :Lines<CR>
+map <leader>h :History<CR>
 map <leader>win :Windows<CR>
 " }}}
