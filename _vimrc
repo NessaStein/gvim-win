@@ -1,6 +1,8 @@
 " 启动设置 {{{
 source $VIMRUNTIME/mswin.vim
 source $VIMRUNTIME/vimrc_example.vim
+set nocompatible
+behave mswin
 " Windows下启动自动全屏
 "au GUIEnter * simalt ~x
 " 启动的时候不显示那个援助索马里儿童的提示
@@ -8,16 +10,17 @@ autocmd GUIEnter * set shortmess=atI
 "打开filetype自动功能
 filetype indent plugin on
 
-" vim 文件折叠方式为marker
-augroup ft_vim
-    au!
-    au FileType vim setlocal foldmethod=marker
-augroup END
+" 关闭foldmethod
+set nofoldenable
+" vim 文件折叠方式为marker 打开折叠导致C-p补全变卡
+"augroup ft_vim
+"    au!
+"
+"    autocmd filetype vim setlocal foldmethod=marker
+"augroup END
 " }}}
 
 " 通用设置 {{{
-set nocompatible
-behave mswin
 
 " 在处理未保存或只读文件的时候，弹出确认
 set confirm
@@ -227,6 +230,7 @@ map <leader>hm :Hexmode<CR>
 map <leader>b :Buffers<CR>
 map <leader>f :Files<CR>
 map <leader>l :Lines<CR>
-map <leader>h :History<CR>
+"open recent file
+map <leader>r :History<CR>
 map <leader>win :Windows<CR>
 " }}}
