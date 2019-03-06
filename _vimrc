@@ -157,9 +157,9 @@ exe 'vnoremap <script> <C-V>' paste#paste_cmd['v']
 " 打开当前目录 windows
 map <leader>ex :!start explorer %:p:h<CR>
 " 打开当前目录CMD
-map <leader>cmd :!cmd<cr>
+map <leader>cmd :!start cmd<cr>
 " 打开当前powershell
-map <leader>ps :!powershell<cr>
+map <leader>ps :!start powershell<cr>
 " 打印当前时间
 map <F3> a<C-R>=strftime("%Y-%m-%d %a %I:%M %p")<CR><Esc>
 
